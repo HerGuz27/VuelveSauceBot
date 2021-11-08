@@ -1,10 +1,10 @@
 const Twit = require('twit')
 
 const T = new Twit({
-    consumer_key:         'qM4ebRiS0hjpyKPaUELCYtLu2',
-    consumer_secret:      'i9KO5DsJTMLIoO9os344W9Q3Mb54ekAVxoNlQGBegNgmkqRz8X',
-    access_token:         '1451752376453537792-I3awEsG28GpR40R5lo9Oi3QehnQSbq',
-    access_token_secret:  'YRPbvWAgSWmhd8sfUNhCdYVTnyNVbDRQVvHxc0HctjnyW',
+    consumer_key:         'FWQ7jyvIOgjUZawa57Qd2dRps',
+    consumer_secret:      'DLhyFFzX2rAWk38eoRZQnUlHMGQ9lBcnDmhzGEBTnrnAR6rqyk',
+    access_token:         '1451752376453537792-qaBH34Ju8AZ4WLS52OiO9EbGQlnp4D',
+    access_token_secret:  'UkNkt7TR1Ckkn9nV61zIo9wS2ypGntXxmLkl35kxaqQtU',
     timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
     strictSSL:            true,     // optional - requires SSL certificates to be valid.
   })
@@ -28,17 +28,16 @@ const T = new Twit({
       })
    }
     console.log(tweet.user.location)
-//uso foreach para recorrer cada elemento del array
 keywords.forEach(function(element) {
     let ubicacion=tweet.user.location
     if (ubicacion===null){
         ubicacion='Desconocido'
     }
 
-    //En caso de existir se asigna la posición en pos
+    
     pos = ejemplo.search(element.toString());
 
-    //Si existe
+    
     if(pos!=-1  && ubicacion.includes('Uruguay')){
     console.log('respondi a'+tweet.user.screen_name)
     let reply="@"+tweet.user.screen_name+" Hola te habla el bot del pueblo para decirte que este finde es en Sauce porque #vuelvesauce"
@@ -48,30 +47,5 @@ keywords.forEach(function(element) {
     })
     }
 
-}});
-
-//En caso de que no exista.
-if(pos === -1 && resultado === ""){resultado = "No existe ninguna de las palabras del array.";}
- })
-  
-  
-  
-  
-  
-  /*
-  const stream = T.stream('statuses/filter', { track: '#vuelvesauce' })
-
-  stream.on('tweet', function (tweet) {
-
-   
-   T.post('statuses/retweet/:id', { id: tweet.id_str }, function (err, data, response) {
-    console.log("retweet")
-  })
-
-  T.post('favorites/create', { id: tweet.id_str }, function (err, data, response) {
-    console.log("fav")
-  })
-}
-  
-
-})*/
+  }})
+})
