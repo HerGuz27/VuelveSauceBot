@@ -1,10 +1,10 @@
 const Twit = require('twit')
 
 const T = new Twit({
-    consumer_key:         'FWQ7jyvIOgjUZawa57Qd2dRps',
-    consumer_secret:      'DLhyFFzX2rAWk38eoRZQnUlHMGQ9lBcnDmhzGEBTnrnAR6rqyk',
-    access_token:         '1451752376453537792-qaBH34Ju8AZ4WLS52OiO9EbGQlnp4D',
-    access_token_secret:  'UkNkt7TR1Ckkn9nV61zIo9wS2ypGntXxmLkl35kxaqQtU',
+    consumer_key:         '',
+    consumer_secret:      '', //Twitter ApiKey
+    access_token:         '',
+    access_token_secret:  '',
     timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
     strictSSL:            true,     // optional - requires SSL certificates to be valid.
   })
